@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "easy-immo-api", "easy-immo-api\easy-immo-api.csproj", "{1E57102B-5D00-4E6D-9383-81234FFF9B49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "easy-immo-api", "easy-immo-api\easy-immo-api.csproj", "{1E57102B-5D00-4E6D-9383-81234FFF9B49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "easy-immo-framework", "easy-immo-framework\easy-immo-framework.csproj", "{F603B083-0D9B-44CE-A8D7-33CC15D03164}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "easy-immo-framework.UnitTest", "easy-immo-framework.UnitTest\easy-immo-framework.UnitTest.csproj", "{AA507A7E-4F9F-410E-84EE-2908E5D76DBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{1E57102B-5D00-4E6D-9383-81234FFF9B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E57102B-5D00-4E6D-9383-81234FFF9B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E57102B-5D00-4E6D-9383-81234FFF9B49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F603B083-0D9B-44CE-A8D7-33CC15D03164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F603B083-0D9B-44CE-A8D7-33CC15D03164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F603B083-0D9B-44CE-A8D7-33CC15D03164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F603B083-0D9B-44CE-A8D7-33CC15D03164}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA507A7E-4F9F-410E-84EE-2908E5D76DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA507A7E-4F9F-410E-84EE-2908E5D76DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA507A7E-4F9F-410E-84EE-2908E5D76DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA507A7E-4F9F-410E-84EE-2908E5D76DBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
