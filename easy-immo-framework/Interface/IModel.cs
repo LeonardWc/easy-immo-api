@@ -1,4 +1,6 @@
-﻿namespace easy_immo_framework.Interface
+﻿using System.Data;
+
+namespace easy_immo_framework.Interface
 {
     public interface IModel
     {

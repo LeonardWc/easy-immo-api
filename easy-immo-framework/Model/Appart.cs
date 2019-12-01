@@ -10,23 +10,31 @@ namespace easy_immo_framework.Model
         {
         }
 
-        public string Adresse { get; set; }
-        public string CodeCommune { get; set; }
-        public string CodeDepartement { get; set; }
-        public string CodePostal { get; set; }
-        public string CodeVoie { get; set; }
         public DateTime DateMutation { get; set; }
 
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
         public string NatureMutation { get; set; }
 
-        public int NombrePrice { get; set; }
-        public string NomCommune { get; set; }
-        public int Numero { get; set; }
-        public double Surface { get; set; }
-        public string TypeLocal { get; set; }
         public double ValeurFonciere { get; set; }
+        public int Numero { get; set; }
+
+        public string Adresse { get; set; }
+
+        public string CodeVoie { get; set; }
+        public string CodePostal { get; set; }
+        public string CodeCommune { get; set; }
+        public string NomCommune { get; set; }
+        public string CodeDepartement { get; set; }
+
+        public string TypeLocal { get; set; }
+
+        public double Surface { get; set; }
+
+        public int NombrePrice { get; set; }
+
+        public double Longitude { get; set; }
+
+        public double Latitude { get; set; }
+
         public IModel Build(string[] lines)
         {
             try

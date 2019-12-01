@@ -5,9 +5,9 @@ namespace easy_immo_framework.Helper
 {
     public static class Extensions
     {
-        public static DateTime ToDate(this string date)
+        public static DateTime ToDate(this string date, string defaultFormat = "yyyy-MM-dd")
         {
-            if (DateTime.TryParseExact(date, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime result))
+            if (DateTime.TryParseExact(date, defaultFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime result))
                 return result;
             return DateTime.MinValue;
         }

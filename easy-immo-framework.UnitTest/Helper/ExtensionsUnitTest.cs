@@ -1,10 +1,12 @@
 ﻿using easy_immo_framework.Helper;
+using easy_immo_framework.Model;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 
 namespace easy_immo_framework.UnitTest.Helper
 {
-    internal class ExtensionsUnitTest
+    public class ExtensionsUnitTest
     {
         [Test]
         public void ToDate()
@@ -33,6 +35,19 @@ namespace easy_immo_framework.UnitTest.Helper
             Assert.AreEqual(4.8, "4.8".ToDouble());
             Assert.AreEqual(4.5, "4,5".ToDouble());
             Assert.AreEqual(10, "10".ToDouble());
+        }
+
+        [Test]
+        public void ToDataTable()
+        {
+            List<Appart> apparts = new List<Appart>();
+            apparts.Add(new Appart()
+            {
+                Adresse = "residence du parc",
+                Numero = 16,
+                CodeDepartement = "93120"
+            });
+            Assert.IsNotNull(apparts.ToDataTable());
         }
     }
 }

@@ -1,12 +1,14 @@
 ﻿using easy_immo_framework.Data;
+using easy_immo_framework.Helper;
 using easy_immo_framework.Interface;
 using easy_immo_framework.Model;
 using NUnit.Framework;
 using System;
+using System.Linq;
 
 namespace easy_immo_framework.UnitTest.Data
 {
-    internal class TextParserTest
+    public class TextParserTest
     {
         private ITextParser _textParser;
 
