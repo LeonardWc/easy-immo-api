@@ -15,14 +15,19 @@ namespace easy_immo_framework.Model
         public string NatureMutation { get; set; }
 
         public double ValeurFonciere { get; set; }
+
         public int Numero { get; set; }
 
         public string Adresse { get; set; }
 
         public string CodeVoie { get; set; }
+
         public string CodePostal { get; set; }
+
         public string CodeCommune { get; set; }
+
         public string NomCommune { get; set; }
+
         public string CodeDepartement { get; set; }
 
         public string TypeLocal { get; set; }
@@ -39,29 +44,38 @@ namespace easy_immo_framework.Model
         {
             try
             {
-                return new Appart
+                if (IsValid(lines))
                 {
-                    DateMutation = lines[1].ToDate(),
-                    NatureMutation = lines[3],
-                    ValeurFonciere = lines[4].ToDouble(),
-                    Numero = lines[5].ToInteger(),
-                    Adresse = lines[7],
-                    CodeVoie = lines[8],
-                    CodePostal = lines[9],
-                    CodeCommune = lines[10],
-                    NomCommune = lines[11],
-                    CodeDepartement = lines[12],
-                    TypeLocal = lines[30],
-                    Surface = lines[31].ToDouble(),
-                    NombrePrice = lines[32].ToInteger(),
-                    Longitude = lines[38].ToDouble(),
-                    Latitude = lines[39].ToDouble()
-                };
+                    return new Appart
+                    {
+                        DateMutation = lines[1].ToDate(),
+                        NatureMutation = lines[3],
+                        ValeurFonciere = lines[4].ToDouble(),
+                        Numero = lines[5].ToInteger(),
+                        Adresse = lines[7],
+                        CodeVoie = lines[8],
+                        CodePostal = lines[9],
+                        CodeCommune = lines[10],
+                        NomCommune = lines[11],
+                        CodeDepartement = lines[12],
+                        TypeLocal = lines[30],
+                        Surface = lines[31].ToDouble(),
+                        NombrePrice = lines[32].ToInteger(),
+                        Longitude = lines[38].ToDouble(),
+                        Latitude = lines[39].ToDouble()
+                    };
+                }
+                return null;
             }
             catch (Exception)
             {
                 return null;
             }
+        }
+
+        private bool IsValid(string[] lines)
+        {
+            return lines[31].ToDouble() != 0 && (lines[30] == "Maison" || lines[30] == "Appartement");
         }
     }
 }

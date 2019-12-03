@@ -43,6 +43,8 @@ namespace easy_immo_framework.UnitTest.Helper
             List<Appart> apparts = new List<Appart>();
             apparts.Add(new Appart()
             {
+                DateMutation = new DateTime(2019,12,1),
+                NatureMutation = "Vente",
                 Adresse = "residence du parc",
                 Numero = 16,
                 CodeDepartement = "93120"

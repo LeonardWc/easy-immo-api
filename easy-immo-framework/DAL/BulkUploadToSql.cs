@@ -42,6 +42,8 @@ namespace easy_immo_framework.DAL
                     SqlBulkCopyOptions.UseInternalTransaction,
                     null
                     );
+                bulkCopy.BulkCopyTimeout = 0;
+                bulkCopy.BatchSize = _commitBatchSize;
 
                 // set the destination table name
                 bulkCopy.DestinationTableName = tableName;
